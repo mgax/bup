@@ -131,7 +131,7 @@ def parse_excludes(flags):
                     f = open(realpath(parameter))
                     for exclude_path in f.readlines():
                         excluded_paths.append(realpath(exclude_path.strip()))
-                except Error, e:
+                except Exception, e:
                     log("warning: couldn't read %s\n" % parameter)
             finally:
                 f.close()
